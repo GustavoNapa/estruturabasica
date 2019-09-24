@@ -1,5 +1,11 @@
 <?php 
 	require_once "../vendor/autoload.php";
 
-	echo "HELLO WORLD!!!";
+	$route = new \App\Route;
+
+	echo "<pre>";
+	echo "</pre>";
+
+
+
 ?>
