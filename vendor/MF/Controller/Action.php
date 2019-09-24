@@ -1,0 +1,22 @@
+<?php 
+	namespace MF\Controller;
+
+	abstract class Action
+	{
+		protected $view;
+
+		function __construct()
+		{
+			$this->view = new \stdClass();
+		}
+
+		protected function render($view)
+		{	
+			$classAtual = get_class($this);
+			$classAtual = str_replace("App\\Controller\\", "", $classAtual);
+			$classAtual = strtolower(str_replace("Controller", "", $classAtual));
+
+			require_once "../App/View/".$classAtual."/".$view.".phtml";
+		}
+	}
+?>
