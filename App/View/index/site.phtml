@@ -1,0 +1,61 @@
+<?php 
+  $conexao = new App\Connection('localhost', 'estrutura_basica', 'root', '');
+
+  $site = $conexao->selectTable('site')[0];
+?>
+
+<div class="card">
+	<div class="card-header">
+		Editar informações do Site
+	</div>
+	<form class="form">
+		<div class="card-body">
+			<div class="form-row">
+				<label class="control-label" for="titulo">
+					Titulo
+				</label>
+				<input type="text" name="titulo" class="form-control" value="<?=$site->titulo; ?>" maxlength="50">
+			</div>
+			<div class="form-row">
+				<label class="control-label" for="descricao">
+					Descrição
+				</label>
+				<input type="text" name="descricao" class="form-control" value="<?=$site->descricao; ?>" maxlength="100">
+			</div>
+			<div class="form-row">
+				<label class="control-label" for="autor">
+					Autor
+				</label>
+				<input type="text" name="autor" class="form-control" value="<?=$site->autor; ?>" maxlength="45">
+			</div>
+			<div class="form-row">
+				<label class="control-label" for="keywords">
+					Palavras-chave
+				</label>
+				<input type="text" name="keywords" class="form-control" value="<?=$site->keywords; ?>" maxlength="200">
+			</div>
+			<div class="form-row">
+				<label class="control-label" for="logo">
+					Logo
+				</label>
+				<input type="text" name="logo" class="form-control" value="<?=$site->logo; ?>" maxlength="100">
+			</div>
+			<div class="form-row">
+				<label class="control-label" for="logo_negativa">
+					Logo negativa
+				</label>
+				<input type="text" name="logo_negativa" class="form-control" value="<?=$site->logo_negativa; ?>" maxlength="100">
+			</div>
+
+			<div class="form-row">
+				<label class="control-label" for="icone">
+					Icone
+				</label>
+				<input type="text" name="icone" class="form-control" value="<?=$site->icone; ?>" maxlength="100">
+			</div>		
+		</div>
+		<div class="card-footer">
+			<button class="btn btn-success float-right">Salvar</button>
+		</div>
+	</form>
+</div>

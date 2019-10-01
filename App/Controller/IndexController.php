@@ -19,5 +19,10 @@
 			$this->view->dados = array("Redmi 7", "A10", "G10");
 			$this->render('sobreNos', 'layoutPage');
 		}
+
+		public function site()
+		{
+			$this->render('site', 'layoutPage');
+		}
 	}
 ?>

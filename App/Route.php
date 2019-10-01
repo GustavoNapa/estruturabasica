@@ -22,6 +22,12 @@
 				'action' => 'sobreNos'
 			);
 
+			$routes['site'] = array(
+				'route' => '/site',
+				'controller' => 'indexController',
+				'action' => 'site'
+			);
+
 			$this->setRoutes($routes);
 		}
 	}
