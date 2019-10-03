@@ -24,5 +24,10 @@
 		{
 			$this->render('site', 'layoutPage');
 		}
+
+		public function alerta()
+		{
+			$this->render('alerta', 'layoutPage');
+		}
 	}
 ?>

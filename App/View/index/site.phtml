@@ -1,12 +1,12 @@
 <?php 
-  $conexao = new App\Connection('localhost', 'estrutura_basica', 'root', '');
+  	$conexao = new App\Connection('localhost', 'estrutura_basica', 'root', '');
 
-  $site = $conexao->selectTable('site')[0];
+  	$site = $conexao->selectTable('site')[0];
 ?>
 
 <div class="card">
 	<div class="card-header">
-		Editar informações do Site
+		<b>Editar informações do Site</b>
 	</div>
 	<form class="form">
 		<div class="card-body">
@@ -54,8 +54,8 @@
 				<input type="text" name="icone" class="form-control" value="<?=$site->icone; ?>" maxlength="100">
 			</div>		
 		</div>
-		<div class="card-footer">
-			<button class="btn btn-success float-right">Salvar</button>
+		<div class="card-footer text-right">
+			<button class="btn btn-success">Salvar</button>
 		</div>
 	</form>
 </div>
